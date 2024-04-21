@@ -1,5 +1,8 @@
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace AuctionService.Entities;
 
+[Table("Items")]
 public class Item
 {
     public Guid Id { get; set; }
@@ -13,8 +16,8 @@ public class Item
     public string Color { get; set; }
 
     public int Mileage { get; set; }
-    
-    public string ImageUrl { get; set; }
+
+    public string ImageUrl { get; set; } = "";
     
     
     // nav properties - sets up relationship to other tables that reference item
