@@ -18,8 +18,8 @@ RUN dotnet restore Carsties.sln
 # Copy the app folders over
 COPY src/GatewayService src/GatewayService
 WORKDIR /app/src/GatewayService
-# RUN dotnet publish -c Release -o /app/src/out
-RUN dotnet publish -c Debug -o /app/src/out
+RUN dotnet publish -c Release -o /app/src/out
+# RUN dotnet publish -c Debug -o /app/src/out
 
 
 # Build runtime image
